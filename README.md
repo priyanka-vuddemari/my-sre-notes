@@ -32,11 +32,23 @@ While both SRE and DevOps aim to improve collaboration between development and o
 
 SRE can be seen as a concrete way to implement DevOps, with more emphasis on quantitative approaches to reliability.
 
-## What is SLA?
+## Service Level Agreement (SLA) 
 Service Level Agreement (SLA) is a contract between a service provider and its customers that defines the level of service expected. It specifies metrics like uptime, response time, and availability that the service must meet. SLAs are legally binding and often include penalties for non-compliance. For example, an SLA might guarantee 99.9% uptime for a web service.
 
-## What is SLO?
+**Example:**
+- If the service does not meet the SLO of 99.9% uptime, the service provider will provide a credit to the client.
+  
+## Service Levele Object (SLO)?
 Service Level Objective (SLO) is an internal target for service reliability. Unlike SLAs, SLOs are not customer-facing contracts but internal goals set by the SRE team. SLOs define what "good" service looks like in quantitative terms. For instance, an SLO might target 99.95% availability for a service over a rolling 28-day window.
+
+**Example:**
+- Our SLO for response time is 99.9% of requests served within 200ms.
+  
+## Service Level Indicator (SLI)
+An SLI is a metric that measures the performance of a service based on a specific aspect that is critical to the user experience. For example, if you are providing a web service, an SLI might measure the response time of that service.
+
+**Example:**
+- Percentage of successful responses (HTTP 200) over total requests in a given timeframe.
 
 ## What is Risk?
 In SRE context, risk refers to the probability and impact of service failures. It's the chance that a system will fail to meet its reliability objectives. Risk is measured in terms of potential downtime, data loss, or degraded performance. SREs quantify risk to make informed decisions about where to invest time and resources.
